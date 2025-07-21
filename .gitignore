@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / dependency libraries
+*.class
+*.war
+*.ear
+*.jar
+
+.factorypath
+
+# 로그 파일
+*.log
+
+# 환경 설정 파일
+*.env
+
+# 빌드 디렉토리와 관련된 파일들
+build/
+target/
+out/
+
+# maven, gradle 패키지 관리 도구 사용시 관련 파일
+.mvn/
+!**/src/main/**/.mvn/
+!**/src/test/**/.mvn/
+.gradle/
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradle/
+build/
+
+# IntelliJ IDEA 설정 파일
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# VS Code 설정 파일
+.vscode/
+
+# Eclipse 설정 파일
+.project
+.classpath
+.settings/
