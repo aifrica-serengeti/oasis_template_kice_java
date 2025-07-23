@@ -1,7 +1,6 @@
 stages:
   - analyze
   - security
-  - gradle_build
   - quality-check
   - docker_build
   - image_scan
@@ -110,21 +109,6 @@ snyk-test:
   only:
     - main
     - dev
-
-
-gradle_build: # job 이름 변경 (maven_build -> gradle_build)
-  stage: gradle_build
-  image: gradle:7.5.1-jdk17 # Gradle 7.5.1과 OpenJDK 17 포함된 이미지 사용
-  script:
-    - echo "Running Gradle build..."
-    # 테스트 건너뛰고 빌드 및 패키징 실행
-    - gradle clean build -x test
-  artifacts:
-    paths:
-      - build/libs/*.jar # Gradle의 기본 JAR/WAR 파일 출력 경로
-  only:
-    - main
-    - dev    
 
 docker_build:
   stage: docker_build
