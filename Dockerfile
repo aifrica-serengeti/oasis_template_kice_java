@@ -9,7 +9,7 @@ COPY gradlew .
 COPY gradle gradle
 
 # build.gradle, settings.gradle, gradle.properties 등 Gradle 관련 파일 복사
-COPY build.gradle settings.gradle ./
+COPY build.gradle settings.gradle gradle.properties ./
 COPY src ./src
 
 # 의존성 다운로드 및 빌드 실행
